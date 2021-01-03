@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {MealList} from '../components';
 
-function FilterCategoryPage({route, navigation}) {
+function MealListPage({route, navigation}) {
   const {strId} = route.params;
   const [filterCategory, setFilterCategory] = useState({});
   const filterCategoryUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${strId}`;
@@ -17,7 +17,10 @@ function FilterCategoryPage({route, navigation}) {
   }, []);
 
   const renderMeal = ({item}) => (
-    <MealList data={item} onSelect={() => navigation.navigate('Meal')} />
+    <MealList
+      data={item}
+      onSelect={() => navigation.navigate('Meal', {idMeal: item.idMeal})}
+    />
   );
 
   return (
@@ -31,4 +34,4 @@ function FilterCategoryPage({route, navigation}) {
   );
 }
 
-export {FilterCategoryPage};
+export {MealListPage};

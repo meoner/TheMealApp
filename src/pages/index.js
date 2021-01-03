@@ -1,3 +1,3 @@
 export * from './CategoryPage';
-export * from './FilterCategoryPage';
+export * from './MealListPage';
 export * from './MealDetailsPage';
