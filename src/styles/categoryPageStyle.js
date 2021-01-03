@@ -11,7 +11,8 @@ const categoryListStyle = StyleSheet.create({
     marginHorizontal: 3,
     height: deviceSize.height * 0.2,
   },
-  containerButton: { //toucableopacity
+  //toucableopacity
+  containerButton: {
     backgroundColor: '#94b4a4',
     borderRadius: 10,
   },
@@ -30,7 +31,6 @@ const categoryListStyle = StyleSheet.create({
     color: 'black',
   },
 });
-const mealListStyle = StyleSheet.create({});
 
 const searchBarStyle = StyleSheet.create({
   container: {
@@ -65,7 +65,7 @@ const headerTextStyle = StyleSheet.create({
   textStyle: {
     fontWeight: 'bold',
     fontSize: 22,
-  }
+  },
 });
 
-export {categoryListStyle, mealListStyle, searchBarStyle, headerTextStyle};
+export {categoryListStyle, searchBarStyle, headerTextStyle};

@@ -26,10 +26,11 @@ function CategoryPage(props) {
     />
   );
 
+  function goSearchPage(val) {}
+
   return (
     <View style={{flex: 1}}>
-    
-      <SearchBar />
+      <SearchBar onSearch={goSearchPage} />
       <HeaderText />
       <FlatList
         horizontal={true}

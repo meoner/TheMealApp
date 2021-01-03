@@ -2,9 +2,9 @@ import React from 'react';
 import {View, Text, FlatList} from 'react-native';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import {FoodList} from '../components';
+import {MealList} from '../components';
 
-function FilterCategoryPage({route}) {
+function FilterCategoryPage({route, navigation}) {
   const {strId} = route.params;
   const [filterCategory, setFilterCategory] = useState({});
   const filterCategoryUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${strId}`;
@@ -16,14 +16,16 @@ function FilterCategoryPage({route}) {
     fetchData();
   }, []);
 
-  const renderCategory = ({item}) => <Text>{item.strMeal}</Text>;
+  const renderMeal = ({item}) => (
+    <MealList data={item} onSelect={() => navigation.navigate('Meal')} />
+  );
 
   return (
     <View style={{flex: 1}}>
       <FlatList
-        keyExtractor={(item) => item.idCategory}
+        keyExtractor={(item) => item.idMeal}
         data={filterCategory.meals}
-        renderItem={renderCategory}
+        renderItem={renderMeal}
       />
     </View>
   );

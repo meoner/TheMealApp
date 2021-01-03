@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, ImageBackground} from 'react-native';
-import {categoryListStyle} from '../styles/componentStyles';
+import {categoryListStyle} from '../styles/categoryPageStyle';
 
 function CategoryList({data, onSelect}) {
   return (

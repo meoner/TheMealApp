@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import {headerTextStyle} from '../styles/componentStyles';
+import {headerTextStyle} from '../styles/categoryPageStyle';
 
 function HeaderText() {
   return (
